@@ -1,0 +1,67 @@
+#display {
+    font-size: 2em; /* Ajusta el tamaño de fuente y la altura del display para compactarlo. */
+    height: 2.5em;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.btn {
+    min-height: 4em; /* Define la altura mínima y el tamaño de fuente de los botones. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.btn[data-operation="clear"] {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+.btn.btn-info {
+    background-color: #0dcaf0;
+    border-color: #0dcaf0;
+    color: #fff;
+}
+
+.btn.btn-dark {
+    background-color: #343a40;
+    border-color: #343a40;
+    color: #fff;
+}
+
+.btn.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+}
+
+#calculator-buttons {
+    /* Define el contenedor de los botones como una cuadrícula (grid). */
+    display: grid;
+    /* Establece 4 columnas de igual ancho. */
+    grid-template-columns: repeat(4, 1fr);
+    /* Define el espacio entre los botones. */
+    gap: 0.4rem;
+}
+
+.plus-button {
+    /* Posiciona el botón de suma (+) para que empiece en la fila 2 y ocupe 3 filas. */
+    grid-row: 2 / span 3;
+    /* Coloca el botón de suma (+) en la cuarta columna. */
+    grid-column: 4;
+}
+
+.zero-button {
+    /* Hace que el botón cero (0) ocupe 2 columnas horizontalmente. */
+    grid-column: span 2;
+}
+
+.card {
+    /* Limita el ancho máximo de la calculadora y la centra en la pantalla. */
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
